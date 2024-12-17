@@ -1,3 +1,11 @@
+# WE4B - WEB Project
+
+## Authors
+- **Loric Ravassard**
+- **Thibault Mayer**  
+*Université de Technologie de Belfort-Montbéliard (UTBM) - Spring 2023*
+
+
 Version logiciel :
 ---------------------------------------------------------
 
