@@ -1,0 +1,63 @@
+/*
+    CSS du Menu
+*/
+
+:root {
+    --taille-element: 25%; /*Car il y a 4 elements*/
+}
+
+.elem-menu {
+    float: left;
+    width: var(--taille-element); 
+}
+
+.elem-menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    background-color: #3b3b4f;
+}
+
+.elem-menu a:hover {
+    background-color: #3b6969;
+}
+
+.dropdownmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1b1b32;
+}
+
+#ID_myblog a img {
+    width: 15%;
+    max-width: 100px;   /*Pour être sûr que l'image rentre dans la barre de menu*/
+    height: auto;
+    vertical-align: middle;
+    margin: -33px 0;
+}
+
+#ID_myblog {
+    padding: 0;
+}
+
+.sous-menu {
+    display: none;
+    width: var(--taille-element);
+    z-index: 1000;
+    list-style-type: none;
+    padding-left: 0;
+    position: absolute;
+}
+
+nav > ul .elem-menu:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu .elem-menu {
+    float: none;
+    width: 100%;
+}

@@ -1,0 +1,325 @@
+/*
+  CSS du contenu du site
+*/
+
+/* Corp du site*/
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;  /**1b1b32**/
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+  }
+  
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+  }
+  
+  form {
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+  }
+  
+  fieldset:last-of-type {
+    border-bottom: none;
+  }
+  
+  label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+ 
+  select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+  
+  .input-connexion, .input-inscription, .submit-form {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+  }
+  
+  input[type="file"] {
+    padding: 1px 2px;
+  }
+  
+  #retour-connexion, #retour-inscription {
+      list-style-type: none;
+      color: red;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+/* CSS des posts*/
+.articles {
+  margin-top : 30px;
+}
+
+.articles .article{
+  display : flex;
+  flex-wrap : wrap;
+  margin-bottom: 30px;
+  border: 3px #353588 solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1300px;
+  margin: 10px auto;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.articles .article .left img {
+  height: 300px;
+  width: 500px;
+}
+
+.articles .article .right{
+  max-width: 50%;
+  margin-left: 40px;
+  margin-right: 60px; 
+  color: #c36363;
+}
+
+.articles .article .right p.date{
+  color: #D3D3F7 ;
+  text-align: left;
+}
+
+.articles .article .right p.contenu{
+  color: #808080 ;
+  text-align: left;
+  
+}
+
+.title{
+  color: #FFC300;
+}
+
+.modifier form {
+  display: inline-block;
+}
+
+.modifier button[type="submit"] {
+  background-color: #f2f2f2;
+  color: #1b1b32;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modifier button[type="submit"]:hover {
+  background-color: #1b1b32;
+  color: #f2f2f2;
+
+}
+/* Bouton d'ajout de posts/modification */
+.creer form {
+  display: flex;
+}
+
+.creer button[type="submit"] {
+  background-color: #f2f2f2;
+  color: #1b1b32;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.creer button[type="submit"]:hover {
+  background-color: #1b1b32;
+  color: #f2f2f2;
+  text-align : center;
+
+}
+
+.hidden, .btn-commenter.hidden {
+    display: none;
+
+}
+
+/* Affichage de la liste des blogs visitables */
+.blog-list {
+  background-color: #808080 ;
+  padding: 10px 5px; /* Réduit le padding horizontal à 5px */
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 12px auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-list li {
+  list-style: none;
+  text-align: left;
+  margin-left: 150px;
+}
+
+.blog-list a {
+  color: #1b1b32;
+  text-decoration: none;
+}
+
+.blog-list a:visited {
+  color: #1b1b32; /* la même couleur que pour les liens non visités */
+}
+
+.blog-list a:hover {
+  text-decoration: none;
+}
+.blog-list p {
+  margin: 0;
+  text-align: center;
+}
+
+.blog-list:hover {
+  background-color: #f2f2f2;
+}
+
+.blog-list strong {
+  font-weight: bold;
+  color: #ec9b73;
+}
+
+/*Style des boutons pour charger plus de contenu*/
+.charger-plus {
+    text-align: center;
+    margin: 30px;
+}
+
+.charger-plus button {
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    color: #36395A;
+    cursor: pointer;
+    line-height: 1;
+    transition: box-shadow .15s,transform .15s;
+    padding: 15px;
+}
+
+.charger-plus button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.charger-plus button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.charger-plus button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+/*Pour le contenu des posts et des commentaires*/
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    color: black;
+}
+
+/*Pour tous les input type text autre que pour l'inscription et la connexion*/
+.input-text {
+    line-height: 1.8;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #f8f8f8;
+}
+
+#recherche-titre-block {
+    float: left;
+    margin-bottom: 30px;
+}
+
+#recherche-pseudo-block {
+    float: right;
+    margin-bottom: 30px;
+}
+
+/*Pour les boutons afficher les commentaires*/
+.btn-voir-commentaire {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+}
+
+.btn-voir-commentaire:hover {
+    background-color: #f7fafa;
+}
+
+/*Pour les boutons pour commenter*/
+.btn-commenter {
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    color: #3c4043;
+    cursor: pointer;
+    font-size: 14px;
+    height: 48px;
+    padding: 2px 24px;
+}
+
+.btn-commenter:hover {
+    background: #f6f9fe;
+    color: #174ea6;
+}
+
+.auteur {
+    margin-bottom: 10px;
+}
